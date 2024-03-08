@@ -72,7 +72,7 @@ module.exports = function(RED) {
           id = resp.data.id;
           const body = {
             status: msg.payload.text,
-            visibility: msg.payload.visibility || this.visibility,
+            visibility: msg.payload.visibility || node.visibility,
             media_ids: [id]
           }
           if (msg.payload.contentWarning) {
